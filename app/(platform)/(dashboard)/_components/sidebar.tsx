@@ -39,7 +39,7 @@ export default function SideBar({
     setExpanded((prev) => ({ ...prev, [id]: !expanded[id] }));
   };
 
-  if (!isLoadedOrg || !isLoadedOrgList || userMemberships.isLoading || 3 > 2)
+  if (!isLoadedOrg || !isLoadedOrgList || userMemberships.isLoading)
     return (
       <div className="w-full flex flex-col ">
         <div className="flex justify-between mb-2">

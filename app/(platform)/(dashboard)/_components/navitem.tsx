@@ -59,7 +59,7 @@ const NavItem = ({ isActive, isExpanded, onExpand, organization }: Props) => {
         className={cn(
           "flex items-center gap-x-2 p-1.5 text-neutral-700 rounded-md hover:bg-neutral-500/10  text-start hover:no-underline",
           {
-            "bg-sky-500/10 text-sky-700": isActive && !isExpanded,
+            "bg-sky-500/10 text-sky-700": isActive && isExpanded,
           }
         )}
       >

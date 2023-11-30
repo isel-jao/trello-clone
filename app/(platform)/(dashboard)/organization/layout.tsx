@@ -5,5 +5,5 @@ export default function OrganizationsLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <main>{children}</main>;
+  return <main className=" h-full w-full">{children}</main>;
 }
