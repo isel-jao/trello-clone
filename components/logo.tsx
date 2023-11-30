@@ -8,7 +8,7 @@ export default function Logo() {
       href="/"
       className="hover:opacity-75 transition-opacity  gap-2 items-center font-[800] text-lg  hidden md:flex"
     >
-      <Image src="/logo.svg" alt="Taskify Logo" width={20} height={20}></Image>
+      <Image src="/logo.svg" alt="Taskify Logo" width={30} height={30}></Image>
       <p>Taskify</p>
     </Link>
   );

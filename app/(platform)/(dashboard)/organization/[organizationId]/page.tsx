@@ -7,7 +7,6 @@ export default function Organization() {
     <div className="flex flex-col p-6">
       <span>userId: {userId}</span>
       <span>orgId: {orgId}</span>
-      <OrganizationSwitcher hidePersonal />
     </div>
   );
 }
