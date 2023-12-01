@@ -70,7 +70,7 @@ export function FormPicker({
               name={name}
               checked={selectedImageId === image.id}
               {...props}
-              value={`${image.id}|${image.urls.thumb}|${image.links.full}|${image.links.html}|${image.user.name}`}
+              value={`${image.id}|${image.urls.thumb}|${image.urls.full}|${image.links.html}|${image.user.name}`}
               disabled={pending}
             />
             <Image

@@ -20,8 +20,22 @@ model Board {
   imageUserName String @map("image_user_name")
   imageLinkHtml String @map("image_link_html") @db.Text
 
+  lists List[]
+
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
 
   @@map("boards")
+}
+
+model List {
+  id    String @id @default(uuid())
+  order Int
+  title String
+
+  boardId String @map("board_id")
+  board   Board  @relation(fields: [boardId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
 }
