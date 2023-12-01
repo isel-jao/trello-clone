@@ -8,18 +8,17 @@ import { createSafeAction } from "@/lib/create-safe-action";
 import { createBoardSchema } from "./schema";
 
 const handler = async (data: InputType): Promise<OutputType> => {
-  const { userId } = auth();
+  const { userId, orgId } = auth();
 
-  if (!userId) return { error: "Unauthorized" };
-  console.log(`handler: userId ${userId}`);
-
+  if (!userId || !orgId) return { error: "Unauthorized" };
   try {
-    const board = await db.board.create({ data });
-    revalidatePath(`/board/${board.id}`);
+    console.log({ data });
+
+    const board = await db.board.create({ data: { ...data, orgId } });
     return { data: board };
   } catch (e) {
-    console.error(e);
-    return { error: "Something went wrong" };
+    console.log({ e });
+    return { error: "Something went wrong!" };
   }
 };
 
