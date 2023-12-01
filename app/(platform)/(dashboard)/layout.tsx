@@ -8,14 +8,9 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="w-full h-full pt-14  bg-slate-100   ">
+    <div className="h-full w-full bg-slate-100  pt-14   ">
       <NavBar />
-      <div className="flex  h-full max-w-screen-2xl mx-auto">
-        <div className="w-64 shrink-0 hidden md:block p-4">
-          <SideBar />
-        </div>
-        <div className="flex-1">{children}</div>
-      </div>
+      {children}
     </div>
   );
 }
