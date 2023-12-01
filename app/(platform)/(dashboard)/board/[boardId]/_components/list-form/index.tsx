@@ -56,7 +56,7 @@ export default function ListForm() {
 
   return (
     <ListWrapper>
-      <div className="flex  rounded-md  bg-white/50 px-2 py-2 shadow-sm backdrop-blur-sm">
+      <div className="flex rounded bg-white/50 px-2 py-2 shadow-sm backdrop-blur-sm">
         {isEditing ? (
           <form action={onSubmit} ref={formRef} className="space-y-2">
             <FormInput

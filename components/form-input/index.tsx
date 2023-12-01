@@ -18,7 +18,7 @@ export const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
     const { pending } = useFormStatus();
     const displayErrors = name && errors?.[name];
     return (
-      <div className={cn("flex flex-col gap-2", className)}>
+      <div className={cn(" flex flex-col gap-2  ", className)}>
         {label ? (
           <Label className="text-xs" htmlFor={id || inputId}>
             {label}
@@ -33,7 +33,7 @@ export const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
           aria-describedby={`${id}-error`}
         />
         {displayErrors ? (
-          <div className="flex flex-col gap-2 p-2 rounded border  border-rose-500">
+          <div className="flex flex-col gap-2 rounded border border-rose-500  p-2">
             {displayErrors.map((error, i) => (
               <span key={i} className=" text-xs text-rose-500">
                 - {error}
@@ -43,7 +43,7 @@ export const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
         ) : null}
       </div>
     );
-  }
+  },
 );
 
 FormInput.displayName = "FormInput";

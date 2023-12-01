@@ -19,7 +19,7 @@ export default function ListContainer({ lists, boardId }: ListContainerProps) {
   }, [lists]);
 
   return (
-    <ol className="flex gap-2">
+    <ol className="  flex items-start gap-2 [&>li]:w-64">
       {orderLists.map((list, index) => (
         <ListItem lists={lists} index={index} key={list.id}>
           {list.title}

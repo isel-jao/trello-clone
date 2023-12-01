@@ -5,5 +5,5 @@ export default function ListWrapper({
 }: {
   children: React.ReactNode;
 }) {
-  return <li className="h- h-full w-64 shrink-0 select-none">{children}</li>;
+  return <li className="h- h-full  shrink-0 select-none">{children}</li>;
 }
